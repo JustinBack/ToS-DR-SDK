@@ -5,7 +5,7 @@ steps:
 - name: Install Packages
   image: node
   commands:
-  - npm install
+  - npm install --save-dev
 
 - name: Compile Typescript
   image: node
