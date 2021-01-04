@@ -1,6 +1,5 @@
 import { Meta } from "./Meta";
-
-type Service = {
+declare type Service = {
     /** The ID of the service */
     id: number;
     /** The name of the service */
@@ -27,13 +26,11 @@ type Service = {
     rating: string;
     /** Can contain deleted if the service has been deleted */
     status?: string;
-}
-
-type Services = {
+};
+declare type Services = {
     /** The list of services */
     services: Service[];
     /** Metadata of the endpoint */
     meta: Meta;
-}
-
-export { Service, Services }
+};
+export { Service, Services };

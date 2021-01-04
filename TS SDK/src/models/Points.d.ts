@@ -1,6 +1,5 @@
-import { Meta } from "./Meta"
-
-type Point = {
+import { Meta } from "./Meta";
+declare type Point = {
     /** The ID of the point */
     id: number;
     /** The user id of the author */
@@ -37,15 +36,11 @@ type Point = {
     service_needs_rating_update: boolean;
     /** The ID of the document */
     document_id?: number;
-}
-
-
-type Points = {
+};
+declare type Points = {
     /** A list of points */
     points: Point[];
     /** Metadata of the endpoint */
     meta: Meta;
-}
-
-
+};
 export { Points, Point };

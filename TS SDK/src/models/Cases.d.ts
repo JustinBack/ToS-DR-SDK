@@ -1,6 +1,5 @@
 import { Point } from "./Points";
-
-type Topic = {
+declare type Topic = {
     /** The ID of the topic */
     id: number;
     /** The title of the topic */
@@ -15,9 +14,8 @@ type Topic = {
     updated_at: Date;
     /** The old system ID */
     oldId: string;
-}
-
-type Case = {
+};
+declare type Case = {
     /** The ID of the case */
     id: number;
     /** The title of the case */
@@ -32,6 +30,5 @@ type Case = {
     topic: Topic;
     /** The points assigned to the case */
     points: Point[];
-}
-
+};
 export { Case };
