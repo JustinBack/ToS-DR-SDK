@@ -30,35 +30,43 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".gitignore">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="gruntfile.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="models\Meta.ts">
+    <TypeScriptCompile Include="src\models\Meta.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="models\Points.ts" />
-    <TypeScriptCompile Include="models\Topics.ts" />
-    <TypeScriptCompile Include="models\Cases.ts">
+    <TypeScriptCompile Include="src\models\Points.ts" />
+    <TypeScriptCompile Include="src\models\Topics.ts" />
+    <TypeScriptCompile Include="src\models\Cases.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="models\Services.ts">
+    <TypeScriptCompile Include="src\models\Services.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="modules\Points.ts" />
-    <TypeScriptCompile Include="modules\Topics.ts" />
-    <TypeScriptCompile Include="modules\Cases.ts" />
-    <TypeScriptCompile Include="modules\Services.ts">
+    <TypeScriptCompile Include="src\modules\Points.ts" />
+    <TypeScriptCompile Include="src\modules\Topics.ts" />
+    <TypeScriptCompile Include="src\modules\Cases.ts" />
+    <TypeScriptCompile Include="src\modules\Services.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="sdk.ts">
+    <TypeScriptCompile Include="src\sdk.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="models\" />
-    <Folder Include="modules\" />
+    <Folder Include="build\" />
+    <Folder Include="src\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\modules\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

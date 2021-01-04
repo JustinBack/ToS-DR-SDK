@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cases = void 0;
+exports.Services = void 0;
 const https = require("https");
-class Cases {
-    static fetch(caseID) {
+class Services {
+    static fetch(serviceID) {
         return new Promise((resolve, reject) => {
             const options = {
                 hostname: 'edit.tosdr.org',
                 port: 443,
-                path: '/api/v1/cases/' + caseID,
+                path: '/api/v1/services/' + serviceID,
                 method: 'GET'
             };
             let str = "";
@@ -27,12 +27,12 @@ class Cases {
             req.end();
         });
     }
-    static fetchAll() {
+    static fetchAll(Page = 1) {
         return new Promise((resolve, reject) => {
             const options = {
                 hostname: 'edit.tosdr.org',
                 port: 443,
-                path: '/api/v1/cases/',
+                path: '/api/v1/services/?page=' + Page,
                 method: 'GET'
             };
             let str = "";
@@ -52,5 +52,4 @@ class Cases {
         });
     }
 }
-exports.Cases = Cases;
-//# sourceMappingURL=Cases.js.map
+exports.Services = Services;
