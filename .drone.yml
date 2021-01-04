@@ -1,10 +1,13 @@
 kind: pipeline
 name: Test TS SDK
 
-workspace:
-  - path: "TS SDK"
-
 steps:
+
+- name: Move into working directory
+  image: node
+  commands: 
+  - cd "TS SDK"
+
 - name: Install Packages
   image: node
   commands:
