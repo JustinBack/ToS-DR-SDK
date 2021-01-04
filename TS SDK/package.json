@@ -1,6 +1,6 @@
 {
   "name": "tosdr-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An SDK to interact with the API of Terms of Service; Didn't Read",
   "main": "build/sdk.js",
   "author": "Justin René Back <justin@tosdr.org>",
