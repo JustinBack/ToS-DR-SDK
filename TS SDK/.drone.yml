@@ -6,12 +6,16 @@ steps:
   image: node
   commands:
   - npm install
+
 - name: Compile Typescript
   image: node
   commands:
   - ./node_modules/.bin/tsc
 
-
+- name: JS Tests
+  image: node
+  commands:
+  - npm test
 
 - name: Clean Build
   image: node
