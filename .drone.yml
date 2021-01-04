@@ -1,6 +1,9 @@
 kind: pipeline
 name: Test TS SDK
 
+workspace:
+  - path: "TS SDK"
+
 steps:
 - name: Install Packages
   image: node
