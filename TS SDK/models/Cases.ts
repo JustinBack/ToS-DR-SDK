@@ -1,41 +1,36 @@
-interface Topic {
-    id: number;
-    title: string;
-    subtitle: string;
-    description: string;
-    created_at: Date;
-    updated_at: Date;
-    oldId: string;
-}
+import { Point } from "./Points";
 
-interface Point {
+interface Topic {
+    /** The ID of the topic */
     id: number;
-    user_id: number;
-    rank: number;
+    /** The title of the topic */
     title: string;
-    source: string;
-    status: string;
-    analysis: string;
+    /** The subtitle of the topic */
+    subtitle: string;
+    /** The description of the topic */
+    description: string;
+    /** The date of creation of the topic */
     created_at: Date;
+    /** The last update date of the topic */
     updated_at: Date;
-    service_id: number;
-    quoteText: string;
-    case_id: number;
+    /** The old system ID */
     oldId: string;
-    point_change: string;
-    quoteStart?: number;
-    quoteEnd?: number;
-    service_needs_rating_update: boolean;
-    document_id?: number;
 }
 
 export interface Case {
+    /** The ID of the case */
     id: number;
+    /** The title of the case */
     title: string;
+    /** The weight of the case */
     score: number;
+    /** The description of the case */
     description: string;
+    /** The rating of the case: blocker,bad,neutral,good */
     classification: string;
+    /** The topic of the Case */
     topic: Topic;
+    /** The points assigned to the case */
     points: Point[];
 }
 
