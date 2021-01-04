@@ -1,55 +1,17 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fetchAll = exports.fetchService = void 0;
-const https = require("https");
-function fetchService(serviceID) {
-    return new Promise((resolve, reject) => {
-        const options = {
-            hostname: 'beta.tosdr.org',
-            port: 443,
-            path: '/api/3/service/' + serviceID,
-            method: 'GET'
-        };
-        let str = "";
-        const req = https.request(options, response => {
-            response.on('data', function (chunk) {
-                str += chunk;
-            });
-            //the whole response has been received, so we just print it out here
-            response.on('end', () => {
-                resolve(JSON.parse(str).parameters);
-            });
-        });
-        req.on('error', error => {
-            reject(error);
-        });
-        req.end();
-    });
-}
-exports.fetchService = fetchService;
-function fetchAll() {
-    return new Promise((resolve, reject) => {
-        const options = {
-            hostname: 'beta.tosdr.org',
-            port: 443,
-            path: '/api/3/all.json',
-            method: 'GET'
-        };
-        let str = "";
-        const req = https.request(options, response => {
-            response.on('data', function (chunk) {
-                str += chunk;
-            });
-            //the whole response has been received, so we just print it out here
-            response.on('end', () => {
-                resolve(JSON.parse(str).parameters);
-            });
-        });
-        req.on('error', error => {
-            reject(error);
-        });
-        req.end();
-    });
-}
-exports.fetchAll = fetchAll;
+__exportStar(require("./modules/Services"), exports);
+__exportStar(require("./modules/Cases"), exports);
+__exportStar(require("./modules/Topics"), exports);
+__exportStar(require("./modules/Points"), exports);
 //# sourceMappingURL=sdk.js.map

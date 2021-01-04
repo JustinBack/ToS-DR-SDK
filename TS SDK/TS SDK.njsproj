@@ -35,8 +35,21 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="models\allServices.ts" />
-    <TypeScriptCompile Include="models\getService.ts">
+    <TypeScriptCompile Include="models\Meta.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="models\Points.ts" />
+    <TypeScriptCompile Include="models\Topics.ts" />
+    <TypeScriptCompile Include="models\Cases.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="models\Services.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="modules\Points.ts" />
+    <TypeScriptCompile Include="modules\Topics.ts" />
+    <TypeScriptCompile Include="modules\Cases.ts" />
+    <TypeScriptCompile Include="modules\Services.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="sdk.ts">
@@ -45,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="modules\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

@@ -1,11 +1,9 @@
 {
   "name": "tosdr-sdk",
-  "version": "0.0.0",
-  "description": "TS SDK",
+  "version": "0.0.1",
+  "description": "An SDK to interact with the API of Terms of Service; Didn't Read",
   "main": "sdk.js",
-  "author": {
-    "name": ""
-  },
+  "author": "Justin René Back <justin@tosdr.org>",
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean"
@@ -13,5 +11,19 @@
   "devDependencies": {
     "@types/node": "^8.0.14",
     "typescript": "^3.2.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinBack/ToS-DR-SDK.git"
+  },
+  "keywords": [
+    "tosdr",
+    "sdk"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustinBack/ToS-DR-SDK/issues"
+  },
+  "homepage": "https://github.com/JustinBack/ToS-DR-SDK#readme"
 }
