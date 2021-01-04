@@ -30,14 +30,21 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".drone.yml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include=".gitignore">
       <SubType>Code</SubType>
     </Content>
+    <None Include="bundleconfig.json" />
     <Content Include="gruntfile.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="tests\index.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="build\" />
+    <Folder Include="tests\" />
     <Folder Include="src\" />
     <Folder Include="src\models\" />
     <Folder Include="src\modules\" />

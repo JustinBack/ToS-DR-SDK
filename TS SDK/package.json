@@ -6,7 +6,8 @@
   "author": "Justin René Back <justin@tosdr.org>",
   "scripts": {
     "build": "./node_modules/.bin/grunt",
-    "docs": "./node_modules/.bin/typedoc src/sdk.ts"
+    "docs": "./node_modules/.bin/typedoc src/sdk.ts",
+    "test": "node ./tests/index.js"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
