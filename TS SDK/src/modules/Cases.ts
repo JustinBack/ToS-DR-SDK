@@ -3,6 +3,11 @@ import { Case } from '../models/Cases';
 
 export class Cases {
 
+    /**
+     * Fetch details of a specific case
+     * @param caseID The ID of a case
+     * @returns Promise<Case>
+     */
     static fetch(caseID: number) {
         return new Promise<Case>((resolve, reject) => {
             const options = {
@@ -34,6 +39,11 @@ export class Cases {
         });
     }
 
+
+    /**
+     * Fetch all cases (SLOW)
+     * @returns Promise<Case[]>
+     */
     static fetchAll() {
         return new Promise<Case[]>((resolve, reject) => {
             const options = {

@@ -3,6 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Topics = void 0;
 const https = require("https");
 class Topics {
+    /**
+     * Fetch details of a specific topic
+     * @param topicID The topic id
+     * @returns Promise<Topic>
+     */
     static fetch(topicID) {
         return new Promise((resolve, reject) => {
             const options = {
@@ -27,6 +32,10 @@ class Topics {
             req.end();
         });
     }
+    /**
+     * Fetches all topics
+     * @returns Promise<Topic[]>
+     */
     static fetchAll() {
         return new Promise((resolve, reject) => {
             const options = {

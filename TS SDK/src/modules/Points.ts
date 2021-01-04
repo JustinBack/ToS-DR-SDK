@@ -3,6 +3,11 @@ import { Point, Points as PointsPagination } from '../models/Points';
 
 export class Points {
 
+    /**
+     * Fetch details of a specific point
+     * @param pointID The id of a point
+     * @returns Promise<Point>
+     */
     static fetch(pointID: number) {
         return new Promise<Point>((resolve, reject) => {
             const options = {
@@ -33,7 +38,11 @@ export class Points {
             req.end();
         });
     }
-
+    /**
+     * Fetch all points on the specified page
+     * @param Page The Page number
+     * @returns Promise<Points>
+     */
     static fetchAll(Page: number = 1) {
         return new Promise<PointsPagination>((resolve, reject) => {
             const options = {

@@ -3,6 +3,11 @@ import { Topic } from '../models/Topics';
 
 export class Topics {
 
+    /**
+     * Fetch details of a specific topic
+     * @param topicID The topic id
+     * @returns Promise<Topic>
+     */
     static fetch(topicID: number) {
         return new Promise<Topic>((resolve, reject) => {
             const options = {
@@ -34,6 +39,10 @@ export class Topics {
         });
     }
 
+    /**
+     * Fetches all topics
+     * @returns Promise<Topic[]>
+     */
     static fetchAll() {
         return new Promise<Topic[]>((resolve, reject) => {
             const options = {

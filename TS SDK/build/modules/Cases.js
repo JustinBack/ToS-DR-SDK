@@ -3,6 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cases = void 0;
 const https = require("https");
 class Cases {
+    /**
+     * Fetch details of a specific case
+     * @param caseID The ID of a case
+     * @returns Promise<Case>
+     */
     static fetch(caseID) {
         return new Promise((resolve, reject) => {
             const options = {
@@ -27,6 +32,10 @@ class Cases {
             req.end();
         });
     }
+    /**
+     * Fetch all cases (SLOW)
+     * @returns Promise<Case[]>
+     */
     static fetchAll() {
         return new Promise((resolve, reject) => {
             const options = {

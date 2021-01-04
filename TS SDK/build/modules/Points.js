@@ -3,6 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Points = void 0;
 const https = require("https");
 class Points {
+    /**
+     * Fetch details of a specific point
+     * @param pointID The id of a point
+     * @returns Promise<Point>
+     */
     static fetch(pointID) {
         return new Promise((resolve, reject) => {
             const options = {
@@ -27,6 +32,11 @@ class Points {
             req.end();
         });
     }
+    /**
+     * Fetch all points on the specified page
+     * @param Page The Page number
+     * @returns Promise<Points>
+     */
     static fetchAll(Page = 1) {
         return new Promise((resolve, reject) => {
             const options = {
