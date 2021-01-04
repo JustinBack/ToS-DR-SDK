@@ -30,9 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include=".drone.yml">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include=".gitignore">
       <SubType>Code</SubType>
     </Content>
