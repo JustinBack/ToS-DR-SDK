@@ -53,3 +53,4 @@ class Points {
     }
 }
 exports.Points = Points;
+//# sourceMappingURL=Points.js.map
