@@ -3,27 +3,27 @@ name: Test TS SDK
 
 steps:
 
-- name: Move into working directory
-  image: node
-  commands: 
-  - cd "TS SDK"
 
 - name: Install Packages
   image: node
   commands:
+  - cd ./"TS SDK"/
   - npm install --save-dev
 
 - name: Compile Typescript
   image: node
   commands:
+  - cd ./"TS SDK"/
   - ./node_modules/.bin/tsc
 
 - name: JS Tests
   image: node
   commands:
+  - cd ./"TS SDK"/
   - npm test
 
 - name: Clean Build
   image: node
   commands:
+  - cd ./"TS SDK"/
   - ./node_modules/.bin/tsc --build --clean
